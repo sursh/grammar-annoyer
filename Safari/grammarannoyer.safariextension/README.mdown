@@ -1,0 +1,12 @@
+grammar-annoyer safari
+====================
+
+Derived from Sasha Laundy's [grammar-annoyer](https://github.com/sursh/grammar-annoyer) Chrome extension (which was based on Steven Frank's [cloud-to-butt](https://github.com/panicsteve/cloud-to-butt) Chrome extension) and Logan Collins's [cloud-to-butt-safari](https://github.com/logancollins/cloud-to-butt-safari) Safari Extension. 
+
+
+Installing
+==========
+
+1. Download the code, open Safari, enable Developer mode.
+2. Choose Show Extension Builder from the Develop menu.
+3. Choose Add Extension... from the plus button.
