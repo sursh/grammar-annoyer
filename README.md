@@ -3,7 +3,8 @@ Grammar Annoyer: Bug You're Friends!
 
 Extension to annoy the grammar stickler in your life. Ruins correct grammar and spelling only 10% of the time to slowly drive them mad. 
 
-Chrome: [Direct download of crx file](https://github.com/sursh/grammar-annoyer/Chrome/blob/master/GrammarAnnoyer.crx?raw=true)
+Chrome: [Direct download of crx file](https://github.com/sursh/grammar-annoyer/blob/master/Chrome/GrammarAnnoyer.crx?raw=true)
+
 Safari: [Direct download of safariextz file](https://github.com/drewx0r/grammar-annoyer/blob/master/Safari/grammarannoyer.safariextz?raw=true)
 
 Installation
