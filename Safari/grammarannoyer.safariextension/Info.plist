@@ -9,7 +9,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Grammar Annoyer</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.placardproductions.grammarannoyer</string>
+	<string>com.placardproductions.safari.grammarannoyer</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -29,7 +29,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Annoy Grammar Nazis</string>
+	<string>Annoy You&apos;re Friends</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
