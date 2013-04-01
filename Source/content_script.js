@@ -30,29 +30,32 @@ function walk(node)
 function handleText(textNode) 
 {
 	var randnum = Math.floor((Math.random()*10)+1);
+        var replaces = {
+                "you're": new RegExp(/\byour\b/ig),
+                "definately": new RegExp(/\bdefinitely\b/ig),
+                "there": new RegExp(/\btheir\b/ig),
+                "alot": new RegExp(/\ba lot\b/ig),
+                "it's": new RegExp(/\bits\b/ig),
+                "whom": new RegExp(/\bwho\b/ig),
+                "to": new RegExp(/\btoo\b/ig),
+                "than": new RegExp(/\bthen\b/ig),
+                "leopard": new RegExp(/\bkeyboard\b/ig)
+        };
+
 	if (randnum == 10){
 	
 		var v = textNode.nodeValue;
-
-		v = v.replace(/\bYour\b/g, "You're");
-		v = v.replace(/\byour\b/g, "you're");
-		v = v.replace(/\bDefinitely\b/g, "Definately");
-		v = v.replace(/\bdefinitely\b/g, "definately");
-		v = v.replace(/\bTheir\b/g, "There");
-		v = v.replace(/\btheir\b/g, "there");
-		v = v.replace(/\bA lot\b/g, "Alot");
-		v = v.replace(/\ba lot\b/g, "alot");
-		v = v.replace(/\bIts\b/g, "It's");
-		v = v.replace(/\bits\b/g, "it's");	
-		v = v.replace(/\bWho\b/g, "Whom");
-		v = v.replace(/\bwho\b/g, "whom");	
-		v = v.replace(/\bToo\b/g, "To");
-		v = v.replace(/\btoo\b/g, "to");	
-		v = v.replace(/\bThen\b/g, "Than");
-		v = v.replace(/\bthen\b/g, "than");	
-		v = v.replace(/\bKeyboard\b/g, "Leopard"); // http://xkcd.com/1031/
-		v = v.replace(/\bkeyboard\b/g, "leopard");	
-
+		for (var replace_with in replaces) {
+			var replace_this = replaces[replace_with];
+			v = v.replace(replace_this, function(match) {
+				for (var i = 0; i < match.length && i < replace_with.length; i++) {
+					if (match[i] == match[i].toUpperCase()) {
+						replace_with[i] = replace_with[i].toUpperCase();
+					}
+				}
+				return replace_with;
+			});
+		}
 		textNode.nodeValue = v;
 	}
 }
