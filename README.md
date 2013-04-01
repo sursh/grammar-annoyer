@@ -1,4 +1,4 @@
-Grammar Annoyer
+Grammar Annoyer: Bug You're Friends!
 =============
 
 Chrome extension to annoy the grammar stickler in your life. Ruins correct grammar and spelling only 10% of the time to slowly drive them mad. 
