@@ -1,5 +1,5 @@
 {
-	"manifest_version": 1,
+	"manifest_version": 2,
 	"name": "Grammar Annoyer",
 	"version": "1.0",
 	"description": "Makes common grammar mistakes across the web.",
