@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Grammar Annoyer",
 	"version": "1.0",
-	"description": "Makes common grammar mistakes across the web.",
+	"description": "Annoy you're friends! Makes common grammar mistakes across the web.",
 	"content_scripts": 
 	[
 		{
