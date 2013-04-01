@@ -29,14 +29,28 @@ function walk(node)
 
 function handleText(textNode) 
 {
-	var v = textNode.nodeValue;
-
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
+	var randnum = Math.floor((Math.random()*10)+1);
+	if (randnum == 10){
 	
-	textNode.nodeValue = v;
+		var v = textNode.nodeValue;
+
+		v = v.replace(/\bTheir\b/g, "There");
+		v = v.replace(/\btheir\b/g, "there");
+		v = v.replace(/\bA lot\b/g, "Alot");
+		v = v.replace(/\ba lot\b/g, "alot");
+		v = v.replace(/\bIts\b/g, "It's");
+		v = v.replace(/\bits\b/g, "it's");	
+		v = v.replace(/\bWho\b/g, "Whom");
+		v = v.replace(/\bwho\b/g, "whom");	
+		v = v.replace(/\bToo\b/g, "To");
+		v = v.replace(/\btoo\b/g, "to");	
+		v = v.replace(/\bThen\b/g, "Than");
+		v = v.replace(/\bthen\b/g, "than");	
+		v = v.replace(/\bKeyboard\b/g, "Leopard"); // http://xkcd.com/1031/
+		v = v.replace(/\bkeyboard\b/g, "leopard");	
+
+		textNode.nodeValue = v;
+	}
 }
 
 
