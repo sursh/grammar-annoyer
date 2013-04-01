@@ -34,6 +34,8 @@ function handleText(textNode)
 	
 		var v = textNode.nodeValue;
 
+		v = v.replace(/\bDefinitely\b/g, "Definantly");
+		v = v.replace(/\bdefinitely\b/g, "definantly");
 		v = v.replace(/\bTheir\b/g, "There");
 		v = v.replace(/\btheir\b/g, "there");
 		v = v.replace(/\bA lot\b/g, "Alot");
