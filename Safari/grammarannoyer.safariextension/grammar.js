@@ -24,23 +24,35 @@ function walk(node) {
 	}
 }
 
-function handleText(textNode)  {
+function handleText(textNode) 
+{
 	var randnum = Math.floor((Math.random()*10)+1);
+        var replaces = {
+                "you're": new RegExp(/\byour\b/ig),
+                "definately": new RegExp(/\bdefinitely\b/ig),
+                "there": new RegExp(/\btheir\b/ig),
+                "alot": new RegExp(/\ba lot\b/ig),
+                "it's": new RegExp(/\bits\b/ig),
+                "whom": new RegExp(/\bwho\b/ig),
+                "to": new RegExp(/\btoo\b/ig),
+                "than": new RegExp(/\bthen\b/ig),
+                "leopard": new RegExp(/\bkeyboard\b/ig)
+        };
+
 	if (randnum == 10){
 
 		var v = textNode.nodeValue;
-
-		v = v.replace(/\b([Yy])our\b/g, "$1ou're");
-		v = v.replace(/\b([Dd])efinitely\b/g, "$1efinately");
-		v = v.replace(/\b([Tt])heir\b/g, "$1here");
-		v = v.replace(/\b([Aa]) lot\b/g, "$1lot");
-	    v = v.replace(/\b([Ii])ts\b/g, "$1t's");
-		v = v.replace(/\b([Ww])ho\b/g, "$1hom");
-		v = v.replace(/\b([Tt])oo\b/g, "$1o");
-		v = v.replace(/\b([Tt])hen\b/g, "$1han");
-		v = v.replace(/\bKeyboard\b/g, "Leopard"); // http://xkcd.com/1031/
-		v = v.replace(/\bkeyboard\b/g, "leopard");	
-
+		for (var replace_with in replaces) {
+			var replace_this = replaces[replace_with];
+			v = v.replace(replace_this, function(match) {
+				for (var i = 0; i < match.length && i < replace_with.length; i++) {
+					if (match[i] == match[i].toUpperCase()) {
+						replace_with[i] = replace_with[i].toUpperCase();
+					}
+				}
+				return replace_with;
+			});
+		}
 		textNode.nodeValue = v;
 	}
 }
