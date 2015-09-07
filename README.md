@@ -5,7 +5,7 @@ Extension to annoy the grammar stickler in your life. Ruins correct grammar and 
 
 Chrome: [Direct download of crx file](https://github.com/sursh/grammar-annoyer/blob/master/Chrome/GrammarAnnoyer.crx?raw=true)
 
-Safari: [Direct download of safariextz file](https://github.com/drewx0r/grammar-annoyer/blob/master/Safari/grammarannoyer.safariextz?raw=true)
+Safari: [Direct download of safariextz file](https://github.com/sursh/grammar-annoyer/blob/master/Safari/grammarannoyer.safariextz?raw=true)
 
 Installation
 ------------
