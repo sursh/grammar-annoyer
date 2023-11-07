@@ -36,7 +36,8 @@ function handleText(textNode)
                 "whom": new RegExp(/\bwho\b/ig),
                 "to": new RegExp(/\btoo\b/ig),
                 "than": new RegExp(/\bthen\b/ig),
-                "leopard": new RegExp(/\bkeyboard\b/ig)
+                "leopard": new RegExp(/\bkeyboard\b/ig),
+                "aminals": new RegExp(/\banimals\b/ig)
         };
 
 	if (randnum == 10){
