@@ -1,19 +1,21 @@
-walk(document.body);
+window.onload = function () {
+  walk(document.body);
+}
 
-function walk(node) 
+  function walk(node)
 {
 	// I stole this function from here:
 	// http://is.gd/mwZp7E
-	
+
 	var child, next;
 
-	switch ( node.nodeType )  
+	switch ( node.nodeType )
 	{
 		case 1:  // Element
 		case 9:  // Document
 		case 11: // Document fragment
 			child = node.firstChild;
-			while ( child ) 
+			while ( child )
 			{
 				next = child.nextSibling;
 				walk(child);
@@ -27,7 +29,7 @@ function walk(node)
 	}
 }
 
-function handleText(textNode) 
+function handleText(textNode)
 {
 	var randnum = Math.floor((Math.random()*10)+1);
         var replaces = {
@@ -39,11 +41,12 @@ function handleText(textNode)
                 "whom": new RegExp(/\bwho\b/ig),
                 "to": new RegExp(/\btoo\b/ig),
                 "than": new RegExp(/\bthen\b/ig),
-                "leopard": new RegExp(/\bkeyboard\b/ig)
+                "leopard": new RegExp(/\bkeyboard\b/ig),
+                "aminals": new RegExp(/\banimals\b/ig)
         };
 
 	if (randnum == 10){
-	
+
 		var v = textNode.nodeValue;
 		for (var replace_with in replaces) {
 			var replace_this = replaces[replace_with];
@@ -59,5 +62,3 @@ function handleText(textNode)
 		textNode.nodeValue = v;
 	}
 }
-
-
